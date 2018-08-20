@@ -1,3 +1,18 @@
+'''
+        Author:  McSteve Ezikeoha
+        Title:   Binary Search Trees
+        Date:    April 25, 2018
+'''
+
+# The BST Property is defined as the following:
+#       Given node N,
+#       if N has no children, return True
+#       if N.left exists and if N.left.payload > N.payload return false
+#       if N.right exists and if N.right.payload < N.payload return false
+#       if N.left exists and if N.left is not a BST return false
+#       if N.right exists and if N.right is not a BST return false
+#       if you make it this far, return true!
+
 class BST:
 	class Node:
 		def __init__(self, payload):
@@ -54,12 +69,10 @@ class BST:
 		pass
 		
 
-def main():
+if __name__ == "__main__":
 	tree = BST()
 	tree.root = BST.Node("man")
 	somenode = tree.find("man")
 	somenode.left = BST.Node("dog")
 	somenode.right = BST.Node("zebra")
 	tree.prettyprint()
-
-main()
